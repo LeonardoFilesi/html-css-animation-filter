@@ -232,13 +232,13 @@
 
 @keyframes spin3 {
     0% {
-        transform: translate(left 10%);
+        transform: translate(top -10px left 10%);
     }
     50% {
-        transform: translate(left 100%);
+        transform: translate(top -10px left 100%);
     }
     100% {
-        transform: translate(left 10%);
+        transform: translate(top -10px left 10%);
     }
 }
 
@@ -251,12 +251,57 @@
 
 @keyframes spin4 {
     0% {
-        transform: translate(right 10%);
+        transform: translate(bottom -10px right 10%);
     }
     50% {
-        transform: translate(right 100%);
+        transform: translate(bottom -10px right 100%);
     }
     100% {
-        transform: translate(right 10%);
+        transform: translate(bottom -10px right 10%);
+    }
+}
+
+/* EX 13 */
+.ex-13-top-white {
+    animation-name: spin5;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes spin5 {
+    0% {
+        transform: translate(top -10px left 10%);
+    }
+    25% {
+        transform: translate(top -10px left 100%);
+    }
+    75% {
+        transform: translate(top -10px left 10%);
+    }
+    100% {
+
+    }
+}
+
+.ex-13-bottom-white {
+    animation-name: spin6;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes spin6 {
+    0% {
+        transform: translate(bottom -10px right 20%);
+    }
+    25% {
+        transform: translate(bottom -10px right 100%);
+    }
+    75% {
+        transform: translate(top -10px right 100%);
+    }
+    100% {
+        transform: translate(bottom -10px right 20%);
     }
 }
