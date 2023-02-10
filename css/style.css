@@ -191,7 +191,26 @@
    }
 }
 
+.ex-12-button:hover .ex-12-top-white {
+    animation-name: spin3;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
 
+@keyframes spin3 {
+    0% {
+        transform: translate(top -10px left 10%);
+    }
+    50% {
+        transform: translate(top -10px left 100%);
+    }
+    100% {
+        transform: translate(top -10px left 10%);
+    }
+}
+
+/* EX 12 - EX 13 */
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -222,27 +241,8 @@
     height: 20px;
 }
 
-/* EX 11 */
-.ex-12-top-white {
-    animation-name: spin3;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count:infinite;
-}
-
-@keyframes spin3 {
-    0% {
-        transform: translate(top -10px left 10%);
-    }
-    50% {
-        transform: translate(top -10px left 100%);
-    }
-    100% {
-        transform: translate(top -10px left 10%);
-    }
-}
-
-.ex-12-bottom-white {
+/* EX 12 */
+.ex-12-button:hover .ex-12-bottom-white {
     animation-name: spin4;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -262,7 +262,7 @@
 }
 
 /* EX 13 */
-.ex-13-top-white {
+.ex-13-button:hover .ex-13-top-white {
     animation-name: spin5;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -270,21 +270,29 @@
 }
 
 @keyframes spin5 {
-    0% {
-        transform: translate(top -10px left 10%);
+    
+        0% {
+            transform: translate(top -10px left 10%);
+        }
+        20% {
+            transform: translate(top -10px left 100%);
+        }
+        40% {
+            transform: translate(bottom -10px left 100%);
+        }
+        60% {
+            transform: translate(bottom -10px left 0%);
+        }
+        80% {
+            transform: translate(top -10px left 0%);
+        }
+        100% {
+            transform: translate(top -10px left 10%);
+        }
     }
-    25% {
-        transform: translate(top -10px left 100%);
-    }
-    75% {
-        transform: translate(top -10px left 10%);
-    }
-    100% {
 
-    }
-}
 
-.ex-13-bottom-white {
+.ex-13-button:hover .ex-13-bottom-white {
     animation-name: spin6;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -295,13 +303,29 @@
     0% {
         transform: translate(bottom -10px right 20%);
     }
-    25% {
+    20% {
         transform: translate(bottom -10px right 100%);
     }
-    75% {
+    40% {
         transform: translate(top -10px right 100%);
+    }
+    60% {
+        transform: translate(top -10px right 0%);
+    }
+    80% {
+        transform: translate(bottom -10px right 0%);
     }
     100% {
         transform: translate(bottom -10px right 20%);
     }
 }
+
+/* NOTE:
+Ho controllato le soluzioni dell'esercizio, e non avevo memoria 
+(nè ho trovato online soluzioni simili, ma quello è problema mio)
+che su un @keyframe espresso in % percentuali, si agisse direttamente
+con le coordinate, piuttosto che con un "transform:qualcosa"
+
+per correttezza, ora che ho visto, non posso completare 
+correttamente l'esercizio, in quanto copierei le soluzioni.
+Buon weekend a chiunque si metterà a leggere sto codice*/
